@@ -1,9 +1,10 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 
-// app.use('/', function(req,res){
-//   res.send('Hello CareerDevs');
-// });
+
+app.use(bodyParser.json());
+app.use("/", express.static("public"));
 
 app.get("/api/get", (req,res)=>{
     res.send("This is a responce from Homeabase");
