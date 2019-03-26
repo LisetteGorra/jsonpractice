@@ -11,7 +11,7 @@ app.get("/api/get", (req,res)=>{
 })
 
 app.post("/api/post", (req, res)=>{
-    res.send();
+    res.send(req.body);
 })
 
 const port = process.env.PORT;
@@ -19,5 +19,5 @@ const ip = process.env.IP;
 
 app.listen(port, ip, function(){
     console.log(`App listening on port: ${port}`);
-    console.log(`App is rining on ip: ${ip}`);
+    console.log(`App is running on ip: ${ip}`);
 })

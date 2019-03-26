@@ -19,7 +19,7 @@ xhttp.onreadystatechange = function() {
   }
 
 };
-xhttp.open("GET", "https://lgorra2018-lgorra.c9users.io/javascript101/jsonpractice/public/index.html", true);
+xhttp.open("GET", "https://lgorra2018-lgorra.c9users.io/api/get", true);
 xhttp.send();
     
 }
@@ -35,13 +35,16 @@ xhttp.onreadystatechange = function() {
   }
 
 };
-xhttp.open("POST", "https://lgorra2018-lgorra.c9users.io/javascript101/jsonpractice/public/index.html", true);
+// open method (method, url, sync)
+xhttp.open("POST", "https://lgorra2018-lgorra.c9users.io/api/post", true);
+
+//set header to match content type
 xhttp.setRequestHeader("Content-type", "application/json");
 const data = {
-    "employeeId": "12345"
+    "employeeId": document.getElementById("employeeName").value
 };
 
-xhttp.send(data);
+xhttp.send(JSON.stringify(data));
     
 }
 </script>
@@ -49,5 +52,10 @@ xhttp.send(data);
      <h1>Hello CareerDevs</h1>
      <button onclick = "makegetRequest()">Get Request</button>
      <p id="getResponce"></p>
+     
+     <p>Employee Name</p>
+     <input id="employeeName" type="text" />
+     <button onclick = "makepostRequest()">Post Request</button>
+     <p id="postResponce"></p>
 </body>
 </html>
