@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LisetteGorra/jsonpractice/issues"
   },
-  "homepage": "https://github.com/LisetteGorra/jsonpractice#readme"
+  "homepage": "https://github.com/LisetteGorra/jsonpractice#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
